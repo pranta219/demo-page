@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.#{$theme-prefix}-section{
+    &-title-pre{
+        font-family: var(--tp-ff-heading);
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--tp-theme-secondary);
+        display: inline-block;
+        margin-bottom: 10px;
+
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--tp-heading-primary);
+        @media #{$sm,$xs} {
+            font-size: 45px;
+        }
+    }
+}

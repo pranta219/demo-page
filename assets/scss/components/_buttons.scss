@@ -1,0 +1,30 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+.#{$theme-prefix}-btn{
+	display: inline-block;
+	font-weight: 600;
+	font-size: 16px;
+	background-color: var(--tp-theme-primary);
+	color: var(--tp-heading-primary);
+	padding: 17px 52px;
+	@include transition();
+	& svg{
+		transform: translateY(0px);
+		margin-left: 10px;
+	}
+	& i{
+		transform: translateY(0px);
+		margin-left: 8px;
+		font-weight: 900;
+	}
+
+	&:hover{
+		color: var(--tp-heading-primary);
+		background: var(--tp-common-white);
+	}
+
+}

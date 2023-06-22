@@ -1,0 +1,328 @@
+@use '../utils/' as *;
+
+.#{$theme-prefix}-container,
+.#{$theme-prefix}-container-fluid,
+.#{$theme-prefix}-container-xxl,
+.#{$theme-prefix}-container-xl,
+.#{$theme-prefix}-container-lg,
+.#{$theme-prefix}-container-md,
+.#{$theme-prefix}-container-sm {
+  --#{$theme-prefix}-gutter-x: 30px;
+  --#{$theme-prefix}-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+  padding-left: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+@media (min-width: 576px) {
+	.#{$theme-prefix}-container-sm, 
+	.#{$theme-prefix}-container {
+	  max-width: 500px;
+	}
+  }
+  @media (min-width: 768px) {
+	.#{$theme-prefix}-container-md, 
+	.#{$theme-prefix}-container-sm, 
+	.#{$theme-prefix}-container {
+	  max-width: 620px;
+	}
+  }
+  @media (min-width: 992px) {
+	.#{$theme-prefix}-container-lg, 
+	.#{$theme-prefix}-container-md, 
+	.#{$theme-prefix}-container-sm, 
+	.#{$theme-prefix}-container {
+	  max-width: 860px;
+	}
+  }
+  @media (min-width: 1200px) {
+	.#{$theme-prefix}{
+		&-container-xl,
+		&-container-lg,
+		&-container-md,
+		&-container-sm,
+		&-container{
+			max-width: 1094px;
+
+		}
+	}
+  }
+  @media (min-width: 1400px) {
+	.#{$theme-prefix}-container-xxl, 
+	.#{$theme-prefix}-container-xl, 
+	.#{$theme-prefix}-container-lg, 
+	.#{$theme-prefix}-container-md, 
+	.#{$theme-prefix}-container-sm, 
+	.#{$theme-prefix}-container {
+	  max-width: 1230px;
+	}
+  }
+
+.#{$theme-prefix}{
+
+	&-flex{
+		@include flexbox();
+	}
+	&-container{
+		--#{$theme-prefix}-gutter-x: 30px;
+		--#{$theme-prefix}-gutter-y: 0;
+		width: 100%;
+		padding-right: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+		padding-left: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+		margin-right: auto;
+		margin-left: auto;
+	}
+	&-row{
+		--#{$theme-prefix}-gutter-x: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: calc(-0.5 * var(--#{$theme-prefix}-gutter-x));
+		margin-left: calc(-0.5 * var(--#{$theme-prefix}-gutter-x));
+
+		& > *{
+			box-sizing: border-box;
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+			padding-left: calc(var(--#{$theme-prefix}-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+		}
+	}
+	&-col-6{
+		flex: 0 0 auto;
+		width: 50%;
+	}
+	&-col-4{
+		flex: 0 0 auto;
+		width: 33.33%;
+	}
+	&-col-3{
+		flex: 0 0 auto;
+		width: 25%;
+	}
+	&-col-12 {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+	&-gx-4 {
+		--#{$theme-prefix}-gutter-x: 4px;
+	}
+
+	&-d-flex {
+		display: flex !important;
+	}
+	&-text-end{
+		text-align: end;
+	}
+	&-text-center{
+		text-align: center;
+	}
+	&-flex-column {
+		flex-direction: column !important;
+	}
+	&-align-items-center {
+		align-items: center !important;
+	}
+	&-justify-content-between {
+		justify-content: space-between !important;
+	}
+}
+
+@media (min-width: 576px) {
+	.#{$theme-prefix}-col-sm {
+	  flex: 1 0 0%;
+	}
+	.#{$theme-prefix}-col-sm-1 {
+	  flex: 0 0 auto;
+	  width: 8.33333333%;
+	}
+	.#{$theme-prefix}-col-sm-2 {
+	  flex: 0 0 auto;
+	  width: 16.66666667%;
+	}
+	.#{$theme-prefix}-col-sm-3 {
+	  flex: 0 0 auto;
+	  width: 25%;
+	}
+	.#{$theme-prefix}-col-sm-4 {
+	  flex: 0 0 auto;
+	  width: 33.33333333%;
+	}
+	.#{$theme-prefix}-col-sm-5 {
+	  flex: 0 0 auto;
+	  width: 41.66666667%;
+	}
+	.#{$theme-prefix}-col-sm-6 {
+	  flex: 0 0 auto;
+	  width: 50%;
+	}
+	.#{$theme-prefix}-col-sm-7 {
+	  flex: 0 0 auto;
+	  width: 58.33333333%;
+	}
+	.#{$theme-prefix}-col-sm-8 {
+	  flex: 0 0 auto;
+	  width: 66.66666667%;
+	}
+	.#{$theme-prefix}-col-sm-9 {
+	  flex: 0 0 auto;
+	  width: 75%;
+	}
+	.#{$theme-prefix}-col-sm-10 {
+	  flex: 0 0 auto;
+	  width: 83.33333333%;
+	}
+	.#{$theme-prefix}-col-sm-11 {
+	  flex: 0 0 auto;
+	  width: 91.66666667%;
+	}
+	.#{$theme-prefix}-col-sm-12 {
+	  flex: 0 0 auto;
+	  width: 100%;
+	}
+  }
+
+@media (min-width: 768px) {
+	.#{$theme-prefix}-col-md {
+	  flex: 1 0 0%;
+	}
+	.#{$theme-prefix}-col-md-auto {
+	  flex: 0 0 auto;
+	  width: auto;
+	}
+	.#{$theme-prefix}-col-md-1 {
+	  flex: 0 0 auto;
+	  width: 8.33333333%;
+	}
+	.#{$theme-prefix}-col-md-2 {
+	  flex: 0 0 auto;
+	  width: 16.66666667%;
+	}
+	.#{$theme-prefix}-col-md-3 {
+	  flex: 0 0 auto;
+	  width: 25%;
+	}
+	.#{$theme-prefix}-col-md-4 {
+	  flex: 0 0 auto;
+	  width: 33.33333333%;
+	}
+	.#{$theme-prefix}-col-md-5 {
+	  flex: 0 0 auto;
+	  width: 41.66666667%;
+	}
+	.#{$theme-prefix}-col-md-6 {
+	  flex: 0 0 auto;
+	  width: 50%;
+	}
+	.#{$theme-prefix}-col-md-7 {
+	  flex: 0 0 auto;
+	  width: 58.33333333%;
+	}
+	.#{$theme-prefix}-col-md-8 {
+	  flex: 0 0 auto;
+	  width: 66.66666667%;
+	}
+	.#{$theme-prefix}-col-md-9 {
+	  flex: 0 0 auto;
+	  width: 75%;
+	}
+	.#{$theme-prefix}-col-md-10 {
+	  flex: 0 0 auto;
+	  width: 83.33333333%;
+	}
+	.#{$theme-prefix}-col-md-11 {
+	  flex: 0 0 auto;
+	  width: 91.66666667%;
+	}
+	.#{$theme-prefix}-col-md-12 {
+	  flex: 0 0 auto;
+	  width: 100%;
+	}
+  }
+
+@media (min-width: 992px) {
+	.#{$theme-prefix}-col-lg {
+	  flex: 1 0 0%;
+	}
+	.#{$theme-prefix}-col-lg-auto {
+	  flex: 0 0 auto;
+	  width: auto;
+	}
+	.#{$theme-prefix}-col-lg-1 {
+	  flex: 0 0 auto;
+	  width: 8.33333333%;
+	}
+	.#{$theme-prefix}-col-lg-2 {
+	  flex: 0 0 auto;
+	  width: 16.66666667%;
+	}
+	.#{$theme-prefix}-col-lg-3 {
+	  flex: 0 0 auto;
+	  width: 25%;
+	}
+	.#{$theme-prefix}-col-lg-4 {
+	  flex: 0 0 auto;
+	  width: 33.33333333%;
+	}
+	.#{$theme-prefix}-col-lg-5 {
+	  flex: 0 0 auto;
+	  width: 41.66666667%;
+	}
+	.#{$theme-prefix}-col-lg-6 {
+	  flex: 0 0 auto;
+	  width: 50%;
+	}
+	.#{$theme-prefix}-col-lg-7 {
+	  flex: 0 0 auto;
+	  width: 58.33333333%;
+	}
+	.#{$theme-prefix}-col-lg-8 {
+	  flex: 0 0 auto;
+	  width: 66.66666667%;
+	}
+	.#{$theme-prefix}-col-lg-9 {
+	  flex: 0 0 auto;
+	  width: 75%;
+	}
+	.#{$theme-prefix}-col-lg-10 {
+	  flex: 0 0 auto;
+	  width: 83.33333333%;
+	}
+	.#{$theme-prefix}-col-lg-11 {
+	  flex: 0 0 auto;
+	  width: 91.66666667%;
+	}
+	.#{$theme-prefix}-col-lg-12 {
+	  flex: 0 0 auto;
+	  width: 100%;
+	}
+  
+  }
+
+$spaces : (25, 30, 35, 40, 60, 90, 100, 120, 135);
+
+@each $size in $spaces {
+	.mb-#{$size}{
+		margin-bottom: #{$size}px;
+	}
+}
+
+@each $size in $spaces {
+	.pt-#{$size}{
+		padding-top: #{$size}px;
+	}
+}
+
+@each $size in $spaces {
+	.pb-#{$size}{
+		padding-bottom: #{$size}px;
+	}
+}
+
+.w-full{
+	width: 100%;
+}

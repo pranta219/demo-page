@@ -1,0 +1,295 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.4 demo css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-demo{
+    &-header{
+        padding-top: 48px;
+        padding-bottom: 30px;
+        &-logo{
+            @media #{$xs} {
+                margin-bottom: 30px;
+            }
+        }
+        &-btn{
+            @media #{$xs} {
+                text-align: start !important;
+            }
+        }
+    }
+    &-transparent{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+
+    &-hero{
+        &-area{
+            @media #{$lg,$md,$sm} {
+                padding-top: 220px; 
+            }
+            @media #{$xs} {
+                padding-top: 260px;
+            }
+        }
+        &-shape {
+             & .shape-1{
+                 position: absolute;
+                 bottom: 25%;
+                 left: 34%;
+                 @media #{$lg} {
+                     left: 32%;
+                     bottom: 22%;
+                 }
+                 @media #{$md} {
+                    left: 39%;
+                 }
+                 @media #{$sm} {
+                    bottom: 30%;
+                    left: 48%;
+                 }
+                 @media #{$xs} {
+                    bottom: 12%;
+                    left: 67%;
+                 }
+             }
+             & .shape-2{
+                position: absolute;
+                top: 20%;
+                left: 45%;
+                animation: sunMove 10s linear infinite;
+                @media #{$lg} {
+                    left: 70%;
+                    top: 30%;
+                }
+                @media #{$md,$sm} {
+                    top: 70%;
+                    left: 70%;
+                }
+                @media #{$xs} {
+                    display: none;
+                }
+             }
+          }
+        &-height{
+            height: 880px;
+            width: 100%;
+            @media #{$lg,$md,$sm} {
+                height: 650px;
+            }
+            @media #{$xs} {
+                height: 700px;
+            }
+        }
+        &-title{
+            font-size: 60px;
+            font-weight: 400;
+            color: var(--tp-common-white);
+            margin-bottom: 65px;
+            @media #{$sm} {
+                font-size: 52px;
+                margin-bottom: 35px;
+            }
+            @media #{$xs} {
+                font-size: 45px;
+                margin-bottom: 35px;
+            }
+        }
+
+        &-img{
+            @media #{$lg,$md,$sm,$xs} {
+                display: none;
+            }
+            & .shape-1{
+                position: absolute;
+                bottom: 0;
+                right: 20%;
+                @media #{$xl} {
+                    bottom: -16%;
+                }
+                
+            }
+            & .shape-2{
+                position: absolute;
+                bottom: 0;
+                right: 11%;
+            }
+            & .shape-3{
+                position: absolute;
+                bottom: 39%;
+                right: 1%;
+            }
+            & .shape-4{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+
+
+
+    &-offer{
+        &-area{}
+    }
+    &-thumb{
+        position: relative;
+        box-shadow: 0px 12px 60px 0px rgba(35, 35, 49, 0.16);
+        margin-bottom: 30px;
+        line-height: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0;
+            background-color: rgb(27, 31, 46);
+            transition: all .3s ease-in-out;
+        }
+        &.coming-soon{
+            &::after{
+                opacity: 0.6;
+            }
+        }
+        &:hover{
+            & .tp-demo-thumb-btn{
+                opacity: 1;
+                visibility: visible;
+                top: 50%;
+                z-index: 1;
+            }
+            &::after{
+                opacity: 0.6;
+                visibility: visible;
+            }
+        }
+        & img{
+            width: 100%;
+        }
+        &-btn{
+            position: absolute;
+            top: 47%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            transition: all 0.3s linear;
+            & .tp-btn{
+                padding: 17px 43px;
+            }
+        }
+        &-title{
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--tp-heading-primary);
+            &:hover{
+                color: var(--tp-theme-primary);
+            }
+        }
+        &-coming-soon{
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            z-index: 1;
+            @media #{$lg} {
+                left: 10%;
+            }
+            @media #{$sm} {
+                left: 30%;
+            }
+            @media #{$xs} {
+                left: 16%;
+            }
+        }
+    }
+
+
+
+
+    &-features{
+        &-area{}
+
+        &-wrapper{
+            padding: 37px;
+            background: var(--tp-common-white);
+            box-shadow: 0px 4px 34px 0px rgba(35, 35, 49, 0.04);
+            transition: all .3s ease-in-out;
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+        &-thumb{
+            & img{
+                margin-bottom: 20px;
+            }
+            & p{
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+
+
+    &-footer{
+        &-area{}
+        &-overlay{
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgb(27, 31, 46);
+            opacity: 0.961;
+            z-index: 0;
+        }
+        &-main{
+            position: relative;
+            border-bottom: 1px solid rgb(82, 87, 104);
+            & p{
+                font-size: 16px;
+                font-weight: 400;
+                color: #aab1cc;
+                margin-bottom: 50px;
+            }
+        }
+        &-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: var(--tp-common-white);
+            @media #{$sm} {
+                font-size: 52px;
+            }
+            @media #{$xs} {
+                font-size: 45px;
+            }
+        }
+    }
+        &-copyright{
+            &-area{
+                position: relative;
+                z-index: 1;
+            }
+            &-content{
+                & p{
+                    color: #8d91a2;
+                    & a{
+                        color: var(--tp-theme-primary);
+                    }
+                }
+            }
+        }
+}

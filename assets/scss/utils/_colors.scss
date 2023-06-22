@@ -1,0 +1,29 @@
+$colors: (
+    'common': (
+        'white': #ffffff,
+        'black': #000,
+        'gray': #F4F5FA,
+    ),
+    'theme': (
+        'primary': #05DAC3,
+        'secondary': #674cef,
+    ),
+    'gradient':(
+        'primary': linear-gradient(90deg, #004D6E 0%, #00ACCC 100%),
+    ),
+    'heading': (
+        'primary': #1b1f2e,
+    ),
+    'text': (
+        'body':#333F4D,
+    ),
+    'border': (
+        'primary': #EAEBED,
+        'secondary': #F0F2F4,
+    )
+);
+
+$white : #fff;
+$black : #020B18;
+$theme-primary : #0989FF;
+$border-primary : #EAEBED;
